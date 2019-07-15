@@ -190,5 +190,9 @@ export default new Router({
       path:'/car-photo',
       component: ()=> import('@/views/car/carPhoto/carPhoto')
     },
+    {
+      path:'/search-val',
+      component: ()=> import('@/views/car/searchVal/searchVal')
+    },
   ]
 })

@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="i-swiper">
-            <h3>我要买车<span>更多车型>></span></h3>
+            <h3>我要买车<span @click="$router.push('/car-list')">更多车型>></span></h3>
             <div>
                 <swiper :options="swiperOption" class="swiper-wrapper">
                     <swiper-slide v-for="(slide, index) in banners" :key="index" class="swiper-slide">
@@ -59,7 +59,7 @@
             </div>
         </div>
          <div class="c-swiper">
-            <h3>二手车<span>更多活动>></span></h3>
+            <h3>二手车<span @click="$router.push('/old-car-list')">更多活动>></span></h3>
             <div class="s-content">
                 <div class="c-item" v-for="i in 8" :key="i+30">
                     <div class="i-img">

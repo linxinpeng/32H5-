@@ -1,6 +1,6 @@
 <template>
     <div class="capital-record">
-        <van-nav-bar title="资金记录"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+        <van-nav-bar title="油卡交易"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="inner">
             <div class="search">
                 <div class="s1">

@@ -26,17 +26,17 @@
                         <img src="../../assets/image/oil/oil1.png" />
                         附近油站
                     </span>
-                    <span>
+                    <span @click="$router.push('/oil-personal')">
                         <img src="../../assets/image/oil/card1.png" />
-                        附近油站
+                        油卡申请
                     </span>
-                    <span>
+                    <span @click="$router.push('/oil-card-loss')"> 
                         <img src="../../assets/image/oil/cardmiss.png" />
-                        附近油站
+                        油卡挂失
                     </span>
-                    <span>
+                    <span @click="$router.push('/my-oil')">
                         <img src="../../assets/image/oil/cardme.png" />
-                        附近油站
+                        我的油卡
                     </span>
                 </div>
                 <div class="o-accout">
@@ -44,21 +44,21 @@
                     <h2>￥ 87,873</h2>
                     <span class="yuan">可用余额（元）</span>
                     <div class="a-btn">
-                        <van-button class="btn" type="info">账户充值</van-button>
-                        <van-button class="btn-fp btn" type="warning">油卡分配</van-button>
+                        <van-button class="btn" type="info" @click="$router.push('/oil-card-Recharge')">账户充值</van-button>
+                        <van-button class="btn-fp btn" type="warning" @click="$router.push('/oil-part')">油卡分配</van-button>
                     </div>
                 </div>
             </div>
             <div class="o-tab">
-                <span>
+                <span @click="$router.push('/match-record')">
                     <img src="../../assets/image/home/tab1.png" />
                     分配记录
                 </span>
-                <span>
+                <span @click="$router.push('/capital-record')">
                     <img src="../../assets/image/home/tab2.png" />
                     资金记录
                 </span>
-                <span>
+                <span @click="$router.push('/cardpy')">
                     <img src="../../assets/image/home/tab3.png" />
                     油卡交易
                 </span>
