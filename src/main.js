@@ -6,6 +6,8 @@ import router from './router'
 import './assets/css/reset.css'
 import VueTouch from 'vue-touch'
 Vue.use(VueTouch, {name: 'v-touch'})
+import moment from 'moment'
+Vue.prototype.$moment = moment;
 // import Vconsole from 'vconsole'
 
 // let vConsole = new Vconsole();
@@ -13,9 +15,9 @@ Vue.use(VueTouch, {name: 'v-touch'})
 // export default vConsole;
 Vue.config.productionTip = false
 
-import { Button,Notify,Dialog,NavBar, Cell, CellGroup    } from 'vant'
+import { Button,Notify,Dialog,NavBar, Cell, CellGroup,Icon,Tag,ActionSheet,ImagePreview   } from 'vant'
 
-Vue.use(Button)
+Vue.use(Button).use(Icon).use(Tag).use(ActionSheet ).use(ImagePreview)
 Vue.use(Notify)
 Vue.use(Dialog)
 Vue.use(NavBar)

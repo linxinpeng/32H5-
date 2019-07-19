@@ -11,7 +11,7 @@
             <div class="b-qd">每日签到</div>
         </div>
         <div class="m-tab">
-            <div class="tab">
+            <div class="tab" @click="$router.push('/my-list')">
                 <img src="../../assets/image/home/tab1.png" />
                 我的订单
             </div>
@@ -19,7 +19,7 @@
                 <img src="../../assets/image/home/tab3.png" />
                 联系客服
             </div>
-             <div class="tab">
+             <div class="tab" @click="$router.push('/personal')">
                 <img src="../../assets/image/home/tab4.png" />
                 账户信息
             </div>
@@ -30,7 +30,7 @@
         </div>
         <div style="height:.05rem;background: #f2f2f2;"></div>
         <div class="m-list">
-            <van-cell title="车辆" icon="logistics" value="13部" is-link/>
+            <van-cell title="车辆" icon="logistics" value="13部" is-link to="/my-car"/>
             <van-cell title="油卡" icon="debit-pay" value="23张" is-link/>
             <van-cell title="贷款" icon="paid" value="3笔" is-link/>
             <van-cell title="保单" icon="description" value="40张" is-link/>

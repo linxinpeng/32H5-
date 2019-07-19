@@ -29,6 +29,13 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  externals: {
+ 
+    'AMap': 'AMap',
+ 
+    'AMapUI': 'AMapUI'
+ 
+  },
   module: {
     rules: [
       {

@@ -1,11 +1,11 @@
 <template>
     <div class="insurance">
         <div class="h-tab">
-            <div class="t-item">
+            <div class="t-item" @click="$router.push('/my-policy')">
                 <img src="../../assets/image/home/tab1.png" />
                 我的保单
             </div>
-            <div class="t-item">
+            <div class="t-item" @click="$router.push('/load-save')">
                 <img src="../../assets/image/home/tab2.png" />
                 道路援救
             </div>

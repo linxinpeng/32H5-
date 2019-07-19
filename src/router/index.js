@@ -194,5 +194,141 @@ export default new Router({
       path:'/search-val',
       component: ()=> import('@/views/car/searchVal/searchVal')
     },
+    {
+      path:'/my-policy',
+      component: ()=> import('@/views/insurance/myPolicy/myPolicy')
+    },
+    {
+      path:'/my-policy-detailDSX',
+      component: ()=> import('@/views/insurance/myPolicyDetail/myPolicyDetail')
+    },
+    {
+      path:'/my-policy-detailYSX',
+      component: ()=> import('@/views/insurance/myPolicyDetailYSX/myPolicyDetailYSX')
+    },
+    {
+      path:'/my-policy-detailSXZ',
+      component: ()=> import('@/views/insurance/myPolicyDetailSXZ/myPolicyDetailSXZ')
+    },
+    {
+      path:'/elec-policy',
+      component: ()=> import('@/views/insurance/elecPolicy/elecPolicy')
+    },
+    {
+      path:'/load-save',
+      component: ()=> import('@/views/insurance/loadSave/loadSave')
+    },
+    {
+      path:'/risk-report',
+      component: ()=> import('@/views/insurance/riskReport/riskReport')
+    },
+    {
+      path:'/car-report',
+      component: ()=> import('@/views/insurance/carReport/carReport')
+    },
+    {
+      path:'/insu-list',
+      component: ()=> import('@/views/insurance/insuList/insuList')
+    },
+    {
+      path:'/996',
+      component: ()=> import('@/views/insurance/996/worry')
+    },
+    {
+      path:'/claim-details',
+      component: ()=> import('@/views/insurance/claimDetails/claimDetails')
+    },
+    {
+      path:'/claim-complete',
+      component: ()=> import('@/views/insurance/claimComplete/claimComplete')
+    },
+    {
+      path:'/parts-list',
+      component: ()=> import('@/views/insurance/partsList/partsList')
+    },
+    {
+      path:'/claim-record',
+      component: ()=> import('@/views/insurance/claimRecord/claimRecord')
+    },
+    {
+      path:'/personal',
+      component: ()=> import('@/views/me/personal/personal')
+    },
+    {
+      path:'/update-password',
+      component: ()=> import('@/views/me/updatePassword/updatePassword')
+    },
+    {
+      path:'/untying',
+      component: ()=> import('@/views/me/Untying/Untying')
+    },
+    {
+      path:'/my-list',
+      component: ()=> import('@/views/me/myList/myList')
+    },
+    {
+      path:'/order-detail',
+      component: ()=> import('@/views/me/orderDetail/orderDetail')
+    },
+    {
+      path:'/logis-info',
+      component: ()=> import('@/views/me/logisInfo/logisInfo')
+    },
+    {
+      path:'/refund',
+      component: ()=> import('@/views/me/refund/refund')
+    },
+    {
+      path:'/apply-refund',
+      component: ()=> import('@/views/me/applyRefund/applyRefund')
+    },
+    {
+      path:'/my-car',
+      component: ()=> import('@/views/me/myCar/myCar')
+    },
+    {
+      path:'/my-car-info',
+      component: ()=> import('@/views/me/myCarInfo/myCarInfo')
+    },
+    {
+      path:'/add-car',
+      component: ()=> import('@/views/me/addCar/addCar')
+    },
+    {
+      path:'/my-loan',
+      component: ()=> import('@/views/me/myLoan/myLoan')
+    },
+    {
+      path:'/loan-detail',
+      component: ()=> import('@/views/me/loanDetail/loanDetail')
+    },
+    {
+      path:'/broker',
+      component: ()=> import('@/views/me/broker/broker')
+    },
+    {
+      path:'/broker-info',
+      component: ()=> import('@/views/me/borkerInfo/borkerInfo')
+    },
+    {
+      path:'/incomebx',
+      component: ()=> import('@/views/me/incomeBX/incomeBX')
+    },
+    {
+      path:'/incomecd',
+      component: ()=> import('@/views/me/incomeCD/incomeCD')
+    },
+    {
+      path:'/incomeyk',
+      component: ()=> import('@/views/me/incomeYK/incomeYK')
+    },
+    {
+      path:'/distri',
+      component: ()=> import('@/views/me/distri/distri')
+    },
+    {
+      path:'/Coupon',
+      component: ()=> import('@/views/me/coupon/coupon')
+    }
   ]
 })
