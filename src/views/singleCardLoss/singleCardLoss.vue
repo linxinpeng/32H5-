@@ -1,6 +1,6 @@
 <template>
-    <div class="card-loss-detail">
-        <van-nav-bar title="批量挂失"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="card-loss-detail">
+        <van-nav-bar v-if="tp == 0" title="油卡挂失"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="inner">
             <div class="card">
                 <h3>632  493  4938  4938  4934</h3>

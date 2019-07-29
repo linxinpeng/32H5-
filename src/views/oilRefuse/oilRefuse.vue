@@ -1,6 +1,6 @@
 <template>
-    <div class="oil-apply" :style="`height:${h}px`">
-        <van-nav-bar title="账户充值"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="`height:${h}px;${tp == 0?'padding-top: 46px':'padding-top: 0'}`" class="oil-apply" >
+        <van-nav-bar v-if="tp == 0" title="账户充值"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="a-inner">
             <div class="i-img">
                 <img class="img1" src="../../assets/image/oil/jj.png" />

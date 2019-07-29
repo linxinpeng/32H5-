@@ -1,6 +1,6 @@
 <template>
   <div class="income-BX">
-    <van-nav-bar title="收益明显" @click-left="$router.go(-1)" left-arrow fixed :z-index="109" />
+    <van-nav-bar v-if="tp == 0" title="收益明显" @click-left="$router.go(-1)" left-arrow fixed :z-index="109" />
     <div class="banner">
       <van-search placeholder="请输入客户名称" background="#f6f6f6" v-model="value" />
       <div class="time">

@@ -1,5 +1,5 @@
 <template>
-    <div class="login">
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 46px'" class="login">
        <h3>账号密码登录</h3>
        <div class="l-info">
            <div class="i-item">

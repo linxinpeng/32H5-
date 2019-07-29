@@ -1,6 +1,6 @@
 <template>
-    <div class="car-detail">
-        <van-nav-bar title="车辆详情页"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="car-detail">
+        <van-nav-bar v-if="tp == 0" title="车辆详情页"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="inner">
             <div class="banner">
                 <img class="i1" src="../../../assets/image/car/carbg.png" />
@@ -72,7 +72,7 @@
                     
                 </div>
                 <div class="list2">
-                    <h3 class="title">车辆列表</h3>
+                    <h3 class="title">相关推荐</h3>
                     <div class="item" v-for="i in 3" :key="i">
                         <h3>江淮 帅铃H330 220马力 3.85米排半仓栅式轻卡(BJ5048XXY-FE)</h3>
                         <div class="r1"><span>最大马力：240</span><span>核定载重：2259</span><span>变速箱：CVT</span></div>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="btn">立即询价</div>
+                <div class="btn" @click="$router.push('/search-val')">立即询价</div>
             </div>
         </div>
     </div>

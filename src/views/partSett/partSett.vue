@@ -1,6 +1,6 @@
 <template>
-    <div class="part-sett" :style="`height: ${h}px`">
-        <van-nav-bar title="分配结算"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="`${tp == 0?'padding-top: 46px':'padding-top: 0'};height: ${h}px`" class="part-sett">
+        <van-nav-bar v-if="tp == 0" title="分配结算"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="s-inner">
             <div class="i-head">
                 <p>可分配金额<span>!</span></p>
@@ -33,7 +33,7 @@ export default {
                 confirmButtonText: '充值',
                 confirmButtonColor: '#39D65D',
                 title: '标题',
-                message: '可分配金额不足，请先充值后再分配。是否前往充值？'
+                message: '分配成功'
             }).then(() => {
             // on close
             }).catch(()=>{})

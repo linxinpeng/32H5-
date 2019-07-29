@@ -1,6 +1,6 @@
 <template>
-    <div class="risk-report">
-        <van-nav-bar title="出险报案"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="risk-report">
+        <van-nav-bar v-if="tp == 0" title="出险报案"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="inner">
             <div class="item" v-for="i in 3" :key="i">
                 <div class="head">

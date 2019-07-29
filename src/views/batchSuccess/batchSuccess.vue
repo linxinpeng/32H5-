@@ -1,6 +1,6 @@
 <template>
-    <div class="batch-success">
-        <van-nav-bar title="批量挂失"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="batch-success">
+        <van-nav-bar v-if="tp == 0" title="批量挂失"   @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="inner">
             <div class="banner">
                 <img src="../../assets/image/oil/succ.png" />

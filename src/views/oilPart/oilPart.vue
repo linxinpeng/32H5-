@@ -1,6 +1,6 @@
 <template>
-    <div class="oil-part">
-        <van-nav-bar title="油卡分配"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="oil-part">
+        <van-nav-bar v-if="tp == 0" title="油卡分配"  @click-left="$router.go(-1)" left-arrow fixed/>
         <van-search placeholder="请输入车牌号或油卡号" v-model="value" />
         <div class="p-inner">
             <div class="i-cash">
@@ -57,7 +57,9 @@ export default {
                 title: '标题',
                 message: '可分配金额不足，请先充值后再分配。是否前往充值？'
             }).then(() => {
-            // on close
+                this.$router.push('/oil-card-Recharge')
+            }).catch(()=>{
+                this.$router.push('/part-sett')
             })
         }
     }

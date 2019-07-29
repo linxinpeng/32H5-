@@ -1,6 +1,6 @@
 <template>
-    <div class="oil-personal" :style="person == '个人'?'background-position-y: -0.6rem;':'background-position-y: .4rem;'">
-        <van-nav-bar title="油卡申请"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="oil-personal">
+        <van-nav-bar v-if="tp == 0" title="油卡申请"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="p-title">
             <h3>上传身份证与行驶证照片</h3>
             <p><img src="../../assets/image/oil/note.png" />首次申请需要完善资料，后续无需再填写。</p>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <p class="desc">请确认以上信息，如有错误请及时修改或重拍</p>
-            <div class="p-btn">
+            <div class="p-btn" @click="$router.push('/oil-choose')">
                 立即申请
             </div>
             <van-action-sheet v-model="show" :actions="actions" @select="onSelect"/>

@@ -1,6 +1,6 @@
 <template>
-    <div class="oil-card-record">
-        <van-nav-bar title="账户充值"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="oil-card-record">
+        <van-nav-bar v-if="tp == 0" title="账户充值"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="banner">
             <p class="p1">账户余额（元）</p>
             <h3>9,889.00</h3>
@@ -27,7 +27,7 @@
                 <p>1.微信支付免手续费，支持信用卡支付；</p>
                 <p>2.微信支付限额可在微信【我】-【钱包】-【银行卡】 内查看对应银行卡的限额。</p>
             </div>
-            <div class="btn-box"><div class="btn">确认</div></div>
+            <div class="btn-box"><div class="btn" @click="$router.push('/card-Recharge-success')">确认</div></div>
             <van-action-sheet v-model="show" :actions="actions" @select="onSelect"/>
         </div>
     </div>

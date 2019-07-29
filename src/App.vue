@@ -4,6 +4,7 @@
   </div>
 </template>
 
+
 <script>
 
 !function(b, a){
@@ -17,7 +18,7 @@
 }(document, window);
 
 export default {
-  name: 'App'
+  name: 'App',
 }
 </script>
 

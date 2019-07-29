@@ -1,6 +1,6 @@
 <template>
-    <div class="claim-details">
-        <van-nav-bar title="理赔详情"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="claim-details">
+        <van-nav-bar v-if="tp == 0" title="理赔详情"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="inner">
             <div class="current">
                 <h3>基础信息</h3>
@@ -36,7 +36,7 @@
                 </div>
             </div>
              <div class="btns">
-                <div class="btn" @click="isTB = true">立即投保</div>
+                <div class="btn" @click="$router.go(-1)">返回理赔列表</div>
             </div>
         </div>
     </div>

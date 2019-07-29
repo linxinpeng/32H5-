@@ -1,8 +1,8 @@
 <template>
-    <div class="my-loan">
-        <van-nav-bar title="我的贷款"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="my-loan">
+        <van-nav-bar v-if="tp == 0" title="我的贷款"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="inner">
-            <div class="item">
+            <div class="item" @click="$router.push('/loan-detail')">
                 <div class="top">
                     <van-tag type="primary" size="large">还款中</van-tag>
                     <span class="title">车易贷一号</span>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" @click="$router.push('/loan-detail')">
                 <div class="top">
                     <van-tag color="#FF9933" size="large">审核中</van-tag>
                     <span class="title">消费贷一号</span>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" @click="$router.push('/loan-detail')">
                 <div class="top">
                     <van-tag color="#cccccc" type="primary" size="large">已结清</van-tag>
                     <span class="title">消费贷一号</span>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="btns">
-            <div class="btn">申请新贷款</div>
+            <div class="btn" @click="$router.push('/apply-loan')">申请新贷款</div>
         </div>
     </div>
 </template>

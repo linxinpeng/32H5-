@@ -1,5 +1,5 @@
 <template>
-    <div class="insurance">
+    <div :style="tp == 0?'padding-top: 0':'padding-top: 0'" class="insurance">
         <div class="h-tab">
             <div class="t-item" @click="$router.push('/my-policy')">
                 <img src="../../assets/image/home/tab1.png" />
@@ -9,11 +9,11 @@
                 <img src="../../assets/image/home/tab2.png" />
                 道路援救
             </div>
-            <div class="t-item">
+            <div class="t-item" @click="$router.push('/risk-report')">
                 <img src="../../assets/image/home/tab3.png" />
-                出现报案
+                出险报案
             </div>
-            <div class="t-item">
+            <div class="t-item" @click="$router.push('/claim-record')">
                 <img src="../../assets/image/home/tab4.png" />
                 申请理赔
             </div>
@@ -41,12 +41,12 @@
                         理赔迅速
                     </span>
                 </div>
-                <div class="c-btn">一键获取</div>
+                <div class="c-btn" @click="$router.push('/car-report')">一键获取</div>
             </div>
         </div>
         <div class="i-recommend">
             <h3>推荐保险</h3>
-            <div class="r-imgs">
+            <div class="r-imgs" @click="$router.push('/996')">
                 <div class="i-head">
                     <span class="i1">
                         <img src="../../assets/image/insurance/i1.png"/>

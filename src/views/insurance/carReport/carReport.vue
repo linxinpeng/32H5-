@@ -1,6 +1,6 @@
 <template>
-    <div class="car-report">
-        <van-nav-bar title="车险报价"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="car-report">
+        <van-nav-bar v-if="tp == 0" title="车险报价"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="banner">
             <img src="../../../assets/image/insurance/banner2.png" />
         </div>
@@ -61,12 +61,12 @@
             </div>
         </div>
         <div class="btns" v-if="show">
-            <div class="btn" @click="showTC = true">立即报案</div>
+            <div class="btn" @click="showTC = true">获取报价</div>
         </div>
         <van-popup v-model="showTC">
             <div class="mask">
                 <img src="../../../assets/image/insurance/tc1.png" />
-                <div class="close" @click="showTC = false"></div>
+                <div class="close" @click="showTC = false;$router.push('/layout/insurance')"></div>
             </div>
         </van-popup>
         <!-- <image-preview :show="showImg" v-on:onClose="toClose" :imgUrl="img" @onDelete="onDelete"></image-preview> -->

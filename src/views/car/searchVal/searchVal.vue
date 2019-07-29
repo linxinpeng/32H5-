@@ -1,6 +1,6 @@
 <template>
-    <div class="search-val">
-        <van-nav-bar title="我要询价"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="search-val">
+        <van-nav-bar v-if="tp == 0" title="我要询价"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="banner">
             <img src="../../../assets/image/car/carbg.png"/>
         </div>

@@ -1,6 +1,6 @@
 <template>
-    <div class="my-oil">
-        <van-nav-bar title="我的油卡"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="my-oil">
+        <van-nav-bar v-if="tp == 0" title="我的油卡"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="o-box">
             <van-search placeholder="请输入车牌号或油卡号" v-model="value" />
             <div class="b-content">

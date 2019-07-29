@@ -1,6 +1,6 @@
 <template>
-    <div class="card-record-fail">
-        <van-nav-bar title="充值失败"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="card-record-fail">
+        <van-nav-bar v-if="tp == 0" title="充值失败"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="inner">
             <img src="../../assets/image/oil/czsb.png"/>
             <p>请尝试再次充值，若仍有问题请 <span @click="show = true">联系客户。</span></p>

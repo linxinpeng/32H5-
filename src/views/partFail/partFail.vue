@@ -1,6 +1,6 @@
 <template>
-    <div class="part-fail">
-        <van-nav-bar title="分配失败"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="part-fail">
+        <van-nav-bar v-if="tp == 0" title="分配失败"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="s-inner">
             <div class="i-head">
                 <img src="../../assets/image/oil/pfail.png"/>

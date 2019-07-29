@@ -1,5 +1,5 @@
 <template>
-    <div class="personal">
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="personal">
         <div class="photo">
             <div class="upload">
                 <van-uploader :after-read="afterReadSFZ" v-if="!imgUrl1">
@@ -63,7 +63,7 @@
         </div>
         <div style="height: .76rem;"></div>
         <div class="btns">
-            <div  class="btn">申请成为经纪人</div>
+            <div  class="btn" @click="$router.push('/distri')">申请成为经纪人</div>
         </div>
          <van-image-preview
             v-model="showImg"

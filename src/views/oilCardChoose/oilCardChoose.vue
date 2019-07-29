@@ -1,6 +1,6 @@
 <template>
-    <div class="oil-card-choose">
-        <van-nav-bar title="油卡申请"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="oil-card-choose">
+        <van-nav-bar v-if="tp == 0" title="油卡申请"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="c-inner">
             <div class="i-title">
                 <h3>油卡选择</h3>

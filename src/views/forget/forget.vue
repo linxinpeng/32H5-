@@ -1,5 +1,5 @@
 <template>
-    <div class="forget">
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 46px'" class="forget">
         <h3>忘记密码</h3>
         <div class="f-info">
             <div class="i-item">

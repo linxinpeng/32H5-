@@ -1,6 +1,6 @@
 <template>
-    <div class="my-policy">
-        <van-nav-bar title="我的保单"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="my-policy">
+        <van-nav-bar v-if="tp == 0" title="我的保单"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="head">
             <div class="search">
                 <van-search placeholder="请输入搜索关键词" v-model="value" />

@@ -1,6 +1,6 @@
 <template>
-    <div class="page">
-        <van-nav-bar :title="title" fixed  :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="page">
+        <van-nav-bar v-if="tp == 0" :title="title"  fixed  :z-index="99"/>
         <router-view></router-view>
         <van-tabbar v-model="active" active-color="#0063FF" inactive-color="#b2b2b2" route>
             <van-tabbar-item replace to="/layout/oil">
@@ -55,6 +55,9 @@ export default {
         [Tabbar.name]: Tabbar,
         [TabbarItem.name]: TabbarItem,
     },
+    // created(){
+    //     console.log(this.tp)
+    // },
     data(){
         return{
             active: 0,

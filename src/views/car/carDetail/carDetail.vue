@@ -1,10 +1,10 @@
 <template>
-    <div class="car-detail">
-        <van-nav-bar title="车辆详情页"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="car-detail">
+        <van-nav-bar v-if="tp == 0" title="车辆详情页"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="inner">
             <div class="banner">
-                <img class="i1" src="../../../assets/image/car/carbg.png" />
-                <div class="btn">
+                <img class="i1" @click="$router.push('/car-photo')" src="../../../assets/image/car/carbg.png" />
+                <div class="btn" >
                     <img src="../../../assets/image/car/photo.png" />
                 </div>
             </div>
@@ -81,7 +81,7 @@
                         <img src="../../../assets/image/car/carbg.png" />
                     </div>
                     <p>	关于经济型家用车的选购问题（尤其是十万元级别的），是笔者日常被问得最多的，他们要经济又要实用，对空间、动力甚至外观造型都有所要求。例如本文的三位主角也是经常被提到的。锋范与威驰，它们身段差不多，售价也在同一区间，是争锋相对的死敌，而对于高一级别的卡罗拉，则是鸡头凤尾的取舍，也是潜在消费者经常纠结的问题。那它们在实际用起…</p>
-                    <div class="btn">立即询价</div>
+                    <div class="btn" @click="$router.push('/search-val')">立即询价</div>
                 </div>
             </div>
         </div>
@@ -124,7 +124,7 @@ export default {
                     line-height: .5rem;
                     color: #ffffff;
                     position: absolute;
-                    top: 48%;
+                    top: 27px;
                     right: 10px;
                     img{
                         width: .18rem;

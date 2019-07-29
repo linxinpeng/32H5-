@@ -1,6 +1,6 @@
 <template>
-    <div class="capital-record">
-        <van-nav-bar title="油卡交易"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="capital-record">
+        <van-nav-bar v-if="tp == 0" title="油卡交易"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="inner">
             <div class="search">
                 <div class="s1">

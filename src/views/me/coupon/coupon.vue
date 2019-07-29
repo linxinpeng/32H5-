@@ -1,6 +1,6 @@
 <template>
-    <div class="coupon">
-        <van-nav-bar title="申请经纪人"  @click-left="$router.go(-1)" fixed left-arrow :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="coupon">
+        <van-nav-bar v-if="tp == 0" title="抵用券"  @click-left="$router.go(-1)" fixed left-arrow :z-index="109"/>
         <div class="inner">
             <div class="tabs">
                 <span :class="active == 1&&'active'" @click="active = 1">未使用</span>

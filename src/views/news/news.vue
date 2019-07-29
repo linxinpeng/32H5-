@@ -1,6 +1,6 @@
 <template>
   <div class="news">
-    <van-nav-bar title="资讯中心" @click-left="$router.go(-1)" left-arrow fixed />
+    <van-nav-bar v-if="tp == 0" title="资讯中心" @click-left="$router.go(-1)" left-arrow fixed />
     <div class="n-tab">
       <van-tabbar v-model="active" fixed style="bottom: auto;">
         <van-tabbar-item>全部</van-tabbar-item>

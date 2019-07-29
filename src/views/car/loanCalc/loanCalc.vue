@@ -1,6 +1,6 @@
 <template>
-    <div class="loan-calc">
-        <van-nav-bar title="贷款计算器"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="loan-calc">
+        <van-nav-bar v-if="tp == 0" title="贷款计算器"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="banner">
             <img src="../../../assets/image/car/bg.png" />
             <div class="box">
@@ -27,8 +27,8 @@
                 <van-field input-align="right" type="number" label="月利率" v-model="interest" placeholder="请输入月利率"><span slot="button">%</span></van-field>
                 <van-cell title="还款方式" :value="ty" is-link @click="show = true"/>
             </van-cell-group>
-            <van-button style="margin-top: .17rem;background: #0063FF;border-color: #0063FF;" type="primary" size="large">开始计算</van-button>
-            <div class="record">
+            <van-button style="margin-top: .17rem;background: #0063FF;border-color: #0063FF;" type="primary" size="large" @click="momey = true">开始计算</van-button>
+            <div class="record" v-if="momey">
                 <h3>还款期数</h3>
                 <div class="item" v-for="i in 8" :key="i">
                     <div class="top">期数：0{{i}}</div>
@@ -59,6 +59,7 @@ export default {
     },
     data(){
         return{
+            momey: false,
             cash:'',
             times:'',
             interest:'',

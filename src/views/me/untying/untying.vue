@@ -1,6 +1,6 @@
 <template>
-    <div class="update-password">
-        <van-nav-bar title="解绑"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="update-password">
+        <van-nav-bar v-if="tp == 0" title="解绑"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="inner">
             <div class="head">
                 <img src="../../../assets/image/me/b.png" />

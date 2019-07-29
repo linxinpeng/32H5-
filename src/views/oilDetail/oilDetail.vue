@@ -1,6 +1,6 @@
 <template>
-    <div class="oil-detail">
-        <van-nav-bar title="加油"  @click-left="$router.go(-1)" left-arrow right-text="挂失" fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="oil-detail">
+        <van-nav-bar v-if="tp == 0" title="加油"  @click-left="$router.go(-1)" left-arrow right-text="挂失" @click-right="$router.push('/single-card-loss')" fixed/>
         <div class="d-inner">
             <div class="i-card">
                 <span>正常</span>
@@ -62,7 +62,7 @@ export default {
                     title: '标题',
                     message: '当前账户余额不足，是否前往充值账户余额？'
                 }).then(() => {
-                // on close
+                    this.$router.push('/oil-card-Recharge')
                 }).catch(() =>{
                     
                 })

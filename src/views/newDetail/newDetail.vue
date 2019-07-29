@@ -1,6 +1,6 @@
 <template>
-    <div class="new">
-        <van-nav-bar title="新闻详情"  @click-left="$router.go(-1)" left-arrow fixed>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="new">
+        <van-nav-bar v-if="tp == 0" title="新闻详情"  @click-left="$router.go(-1)" left-arrow fixed>
             <van-icon name="wap-home" slot="right" @click="$router.push('/layout/home')"/>
         </van-nav-bar>
         <div class="n-rela">

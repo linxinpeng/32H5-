@@ -1,6 +1,6 @@
 <template>
-    <div class="rules">
-        <van-nav-bar title="违章查询"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="rules">
+        <van-nav-bar v-if="tp == 0" title="违章查询"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="r-inner">
             <div class="d-photo">
                 <van-uploader v-if="!imgUrl"  :after-read="afterRead" >
@@ -42,10 +42,10 @@
             <div class="d-record">
                 <h3>查询记录</h3>
                 <div class="r-in">
-                    <p v-for="i in 3" :key="i">闽E 6692G</p>
+                    <p v-for="i in 3" :key="i" @click="$router.push('/rules-result')">闽E 6692G</p>
                 </div>
             </div>
-            <div class="d-btn">查询</div>
+            <div class="d-btn" @click="$router.push('/rules-result')">查询</div>
         </div>
     </div>
 </template>

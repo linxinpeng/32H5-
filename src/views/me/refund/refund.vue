@@ -1,6 +1,6 @@
 <template>
-    <div class="logis-info">
-        <van-nav-bar title="查看物流"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="logis-info">
+        <van-nav-bar v-if="tp == 0" title="查看物流"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="inner">
            <div class="banner">
                 <img src="../../../assets/image/me/order.png" />

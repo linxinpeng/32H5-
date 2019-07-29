@@ -1,6 +1,6 @@
 <template>
-    <div class="car-list">
-        <van-nav-bar title="车辆列表页"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="car-list">
+        <van-nav-bar v-if="tp == 0" title="车辆列表页"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="head">
             <van-search placeholder="请输入车牌号或油卡号" v-model="value" />
             <div class="screen">
@@ -44,7 +44,7 @@
                         </div>
                         <div class="r2">
                             <span>32尊享价：<i>11.88万</i></span>
-                            <span class="s2">查看详情</span>
+                            <span class="s2" @click="$router.push('/car-detail')">查看详情</span>
                         </div>
                     </div>
                 </div>

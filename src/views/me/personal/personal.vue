@@ -1,6 +1,6 @@
 <template>
-    <div class="personal">
-        <van-nav-bar title="个人中心"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="personal">
+        <van-nav-bar v-if="tp == 0" title="个人中心"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="inner">
             <div class="header">
                 <img src="../../../assets/image/me/tx.png" />

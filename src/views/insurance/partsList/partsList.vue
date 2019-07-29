@@ -1,6 +1,6 @@
 <template>
-    <div class="parts-list">
-        <van-nav-bar title="零部件更换项目清单"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="parts-list">
+        <van-nav-bar v-if="tp == 0" title="零部件更换项目清单"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="inner">
             <h3>零部件更换项目</h3>
             <p>共有4份表单<span>1/4</span></p>

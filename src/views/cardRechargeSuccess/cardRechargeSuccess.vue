@@ -1,13 +1,13 @@
 <template>
-    <div class="card-record-success">
-        <van-nav-bar title="充值成功"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="card-record-success">
+        <van-nav-bar v-if="tp == 0" title="充值成功"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="inner">
             <img src="../../assets/image/oil/czcg.png" />
             <p>当前账户余额为：￥{{cash}}</p>
             <p>温馨提示：账户余额需要分配到油卡内才可以加油哦。</p>
             <div class="btns">
-                <div class="btn1 btn">前往分配油卡</div>
-                <div class="btn2 btn" @click="$router.push('/layout/home')">返回首页</div>
+                <div class="btn1 btn" @click="$router.push('/oil-detail')">前往分配油卡</div>
+                <div class="btn2 btn" @click="$router.push('/layout/oil')">返回首页</div>
             </div>
         </div>
     </div>

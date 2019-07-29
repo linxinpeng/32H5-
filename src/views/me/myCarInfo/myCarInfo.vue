@@ -1,6 +1,6 @@
 <template>
-    <div class="my-car-info">
-        <van-nav-bar title="车辆详情"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="my-car-info">
+        <van-nav-bar v-if="tp == 0" title="车辆详情"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div style="height: .1rem;background: #f2f2f2;"></div>
         <div class="inner">
             <van-cell-group :border="false">

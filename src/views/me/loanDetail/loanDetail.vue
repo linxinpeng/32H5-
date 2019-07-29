@@ -1,6 +1,6 @@
 <template>
-    <div class="loan-detail">
-        <van-nav-bar title="贷款详情页"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="loan-detail">
+        <van-nav-bar v-if="tp == 0" title="贷款详情页"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="banner">
             <div class="info">
                 <img src="../../../assets/image/me/card.png" />车易贷1号 <span class="bt">还款中</span>

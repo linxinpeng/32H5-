@@ -1,5 +1,5 @@
 <template>
-    <div class="personal">
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="personal">
         <div class="photo">
             <div class="upload">
                 <van-uploader :after-read="afterReadSFZ" v-if="!imgUrl1">
@@ -39,7 +39,7 @@
             <div style="height: .2rem;"></div>
             <van-checkbox v-model="checked">我已阅读并同意<span class="colorO" @click.stop="show = true">《保险条款》</span>、<span class="colorO" @click.stop="show = true">《投保须知》</span>、<span class="colorO" @click.stop="show = true">《责任免除声明》</span>、<span class="colorO" @click.stop="show = true">《健康确认函》</span>的全部内容。</van-checkbox>
         </div>
-        <div  class="btn">申请成为经纪人</div>
+        <div  class="btn"  @click="$router.push('/distri')">申请成为经纪人</div>
         <van-image-preview
             v-model="showImg"
             :images="images"

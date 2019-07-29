@@ -1,6 +1,6 @@
 <template>
-    <div class="driver">
-        <van-nav-bar title="驾照扣分查询"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="driver">
+        <van-nav-bar v-if="tp == 0" title="驾照扣分查询"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="d-inner">
             <div class="d-photo">
                 <van-uploader v-if="!imgUrl"  :after-read="afterRead" >
@@ -15,18 +15,18 @@
             <div class="d-input">
                 <div class="i-item">
                     <span>驾驶证号</span>
-                    <input type="text" paceholder="请输入完整发动机号" />
+                    <input type="text" placeholder="请输入完整发动机号" />
                 </div>
                 <div class="i-item">
                     <span>档案编号</span>
                     <input type="text" placeholder="请输入完成车架号码" />
                 </div>
             </div>
-            <div class="d-record">l
+            <div class="d-record">
                 <h3>查询记录</h3>
-                <p v-for="i in 3" :key="i">452630 1987****0012</p>
+                <p v-for="i in 3" :key="i"  @click="$router.push('/driver-result')">452630 1987****0012</p>
             </div>
-            <div class="d-btn">查询</div>
+            <div class="d-btn" @click="$router.push('/driver-result')">查询</div>
         </div>
     </div>
 </template>

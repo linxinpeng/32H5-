@@ -1,9 +1,9 @@
 <template>
-    <div class="broker">
-        <van-nav-bar title="申请经纪人"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="broker">
+        <van-nav-bar v-if="tp == 0" title="申请经纪人"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="inner">
             <img src="../../../assets/image/me/borker.png" />
-            <div  class="btn">申请成为经纪人</div>
+            <div  class="btn" @click="$router.push('/broker-info')">申请成为经纪人</div>
         </div>
     </div>
 </template>
@@ -14,7 +14,7 @@ export default {
 </script>
 <style lang="less" scoped>
     .broker{
-        margin-top: 46px;
+        // margin-top: 46px;
         font-size: .12rem;
         
         .inner{

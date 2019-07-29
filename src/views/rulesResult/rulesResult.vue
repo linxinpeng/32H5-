@@ -1,13 +1,13 @@
 <template>
-    <div class="rules">
-        <van-nav-bar title="查询结果"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="rules">
+        <van-nav-bar v-if="tp == 0" title="查询结果"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="r-content">
             <div class="c-info">
                 <div>闽D E57441</div>
                 <div class="i-info">
                     <span>违章：<strong>3</strong> 次</span>
                     <span>扣分：<strong>3</strong> 次</span>
-                    <span>罚款：<strong>3</strong> 次</span>
+                    <span>罚款：<strong>300</strong> 元</span>
                 </div>
             </div>
             <div class="c-list">

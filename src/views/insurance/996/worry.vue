@@ -1,6 +1,6 @@
 <template>
-    <div class="worry-free">
-        <van-nav-bar title="996无忧险"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="worry-free">
+        <van-nav-bar v-if="tp == 0" title="996无忧险"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="banner">
             <img src="../../../assets/image/insurance/996.png" />
             <div class="info-wrap">

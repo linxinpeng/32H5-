@@ -1,6 +1,6 @@
 <template>
-    <div class="apply-loan" :style="`height: ${h}px`">
-        <van-nav-bar title="我要贷款"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="`height: ${h}px;${tp == 0?'padding-top: 46px':'padding-top: 0'}`" class="apply-loan" >
+        <van-nav-bar v-if="tp == 0" title="我要贷款"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="inner">
             <div class="banner">
                 <h2>￥ 150,000</h2>
@@ -33,7 +33,7 @@
                     <van-field input-align="right" label="联系电话" v-model="phone" placeholder="请输入联系电话" />
                     <van-cell title="选择产品" value="车易贷1号" is-link />
                 </van-cell-group>
-                <span class="jsq"><img src="../../../assets/image/car/jsq.png" />贷款计算器</span>
+                <span class="jsq" @click="$router.push('/loan-calc')"><img src="../../../assets/image/car/jsq.png" />贷款计算器</span>
             </div>
             <div class="bottom">
                 <p>手续简单，1张身份证即可贷款，推荐新车购买用户使用。</p>

@@ -1,6 +1,6 @@
 <template>
-    <div class="driver">
-        <van-nav-bar title="查询结果"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="driver">
+        <van-nav-bar v-if="tp == 0" title="查询结果"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="d-content">
             <div class="c-head">
                 <p>驾驶证号：452540 124145 0012</p>

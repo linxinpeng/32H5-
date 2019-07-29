@@ -1,11 +1,11 @@
 <template>
-    <div class="gas">
-        <van-nav-bar title="沿途油站"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="gas">
+        <van-nav-bar v-if="tp == 0" title="沿途油站"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="g-inner">
-            <div class="i-item" v-for="i in 8" :key="i">
-                <div class="item1">漳州相城加油站<span>到这里去>></span></div>
+            <div class="i-item" v-for="item in oils" :key="item.id">
+                <div class="item1">{{item.name}}<span @click="to(item)">到这里去>></span></div>
                 <div class="item2"><img src="../../assets/image/home/cash.png"/>优惠价：5.39元/升 <span>原价：6.09元</span></div>
-                <div class="item3"><img src="../../assets/image/home/position.png"/>芗城区迎宾路188号<span>距离：0.6km</span></div>
+                <div class="item3"><img src="../../assets/image/home/position.png"/>{{item.address}}<span>距离：{{item.distance/1000}}km</span></div>
             </div>
         </div>
     </div>
@@ -13,6 +13,26 @@
 <script>
 export default {
     name:'GasStation',
+    data(){
+        return{
+            oils: [],
+            posi:[]
+        }
+    },
+    created(){
+        if(sessionStorage.getItem('oils')){
+            this.oils = JSON.parse(sessionStorage.getItem('oils'))
+        }
+        if(sessionStorage.getItem('posi')){
+            this.posi = JSON.parse(sessionStorage.getItem('posi'))
+            console.log(this.posi)
+        }
+    },
+    methods:{
+        to(val){
+            location.href = `//uri.amap.com/navigation?from=${this.posi.position.lng},${this.posi.position.lat},${val.name}&to=${val.location},${this.posi.formattedAddress}&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=1`
+        }
+    }
 }
 </script>
 <style lang="less" scoped>

@@ -31,16 +31,16 @@
         <div style="height:.05rem;background: #f2f2f2;"></div>
         <div class="m-list">
             <van-cell title="车辆" icon="logistics" value="13部" is-link to="/my-car"/>
-            <van-cell title="油卡" icon="debit-pay" value="23张" is-link/>
-            <van-cell title="贷款" icon="paid" value="3笔" is-link/>
-            <van-cell title="保单" icon="description" value="40张" is-link/>
-            <van-cell title="团队" icon="friends-o" value="0人" is-link/>
+            <van-cell title="油卡" icon="debit-pay" value="23张" is-link to="/my-oil"/>
+            <van-cell title="贷款" icon="paid" value="3笔" is-link to="/my-loan"/>
+            <van-cell title="保单" icon="description" value="40张" is-link to="/my-policy"/>
+            <van-cell title="分销" icon="friends-o" value="0人" is-link to="/broker"/>
         </div>
         <div style="height:.05rem;background: #f2f2f2;"></div>
         <div class="m-list">
-            <van-cell title="积分商城" icon="gem-o" value="13部" is-link/>
+            <van-cell title="积分商城" icon="gem-o" value="13部" is-link />
             <van-cell title="推荐有礼" icon="point-gift-o" value="23张" is-link/>
-            <van-cell title="优惠券" icon="coupon-o" value="3笔" is-link/>
+            <van-cell title="优惠券" icon="coupon-o" value="3笔" is-link to="/coupon"/>
         </div>
         <div style="height:.1rem;background: #f2f2f2;"></div>
     </div>

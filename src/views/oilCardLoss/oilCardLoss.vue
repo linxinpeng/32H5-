@@ -1,6 +1,6 @@
 <template>
-    <div class="oil-card-loss">
-        <van-nav-bar title="油卡挂失"  @click-left="$router.go(-1)" right-text="批量" @click-right="onClickRight" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="oil-card-loss">
+        <van-nav-bar v-if="tp == 0" title="批量挂失"  @click-left="$router.go(-1)" right-text="批量" @click-right="onClickRight" left-arrow fixed :z-index="99"/>
         <div class="inner">
             <van-search placeholder="请输入车牌号或油卡号" v-model="value" />
             <div class="box">
@@ -21,7 +21,7 @@
         </div>
         <div class="btns">
             <div class="b1">已选择：<strong>{{list.length}}</strong> 张</div>
-            <div class="btn">立即挂失</div>
+            <div class="btn" @click="$router.push('/card-loss-detail')">立即挂失</div>
         </div>
     </div>
 </template>

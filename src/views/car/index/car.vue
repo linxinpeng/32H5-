@@ -22,16 +22,16 @@
                     </tr>
                 </table>
             </div>
-            <div class="d-content1" v-if="false">
+            <div class="d-content1" v-if="true">
                 <h3 class="c-money">￥ 150,000<img src="../../../assets/image/car/tag.png" /></h3>
-                <div class="c-get">马上获取额度</div>
+                <div class="c-get" @click="$router.push('/apply-loan')">马上获取额度</div>
                 <div class="tags">
                     <span>申请快捷</span>
                     <span>放款高效</span>
                     <span>期限灵活</span>
                 </div>
             </div>
-            <div class="d-content">
+            <div class="d-content" v-else>
                 <h4 style="color:#F7710D;">审核中</h4>
                 <p>您的申请已提交，请耐心等待审核结果。</p>
                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="i-swiper">
-            <h3>我要买车<span @click="$router.push('/car-list')">更多车型>></span></h3>
+            <h3>我要买车<span @click="$router.push('/car-list')">更多>></span></h3>
             <div>
                 <swiper :options="swiperOption" class="swiper-wrapper">
                     <swiper-slide v-for="(slide, index) in banners" :key="index" class="swiper-slide">
@@ -59,9 +59,9 @@
             </div>
         </div>
          <div class="c-swiper">
-            <h3>二手车<span @click="$router.push('/old-car-list')">更多活动>></span></h3>
+            <h3>二手车<span @click="$router.push('/old-car-list')">更多>></span></h3>
             <div class="s-content">
-                <div class="c-item" v-for="i in 8" :key="i+30">
+                <div class="c-item" v-for="i in 8" :key="i+30" @click="$router.push('/old-car-detail')">
                     <div class="i-img">
                         <img src="../../../assets/image/insurance/b1.png" />
                     </div>

@@ -1,12 +1,12 @@
 <template>
-    <div class="claim-record">
-        <van-nav-bar title="理赔记录"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="claim-record">
+        <van-nav-bar v-if="tp == 0" title="理赔记录"  @click-left="$router.go(-1)" left-arrow fixed :z-index="109"/>
         <div class="inner">
             <div class="search">
                 <van-search placeholder="请输入搜索关键词" v-model="value" />
             </div>
             <div class="content">
-                <div class="item" v-for="i in 2" :key="i">
+                <div class="item" v-for="i in 2" :key="i" @click="$router.push('/claim-details')">
                     <div class="head">
                         <h3>闽D98544</h3>
                         <van-tag type="primary">待理赔</van-tag>

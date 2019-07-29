@@ -1,6 +1,6 @@
 <template>
-    <div class="car-photo">
-        <van-nav-bar title="图片查看器"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="car-photo">
+        <van-nav-bar v-if="tp == 0" title="图片查看器"  @click-left="$router.go(-1)" left-arrow fixed :z-index="99"/>
         <div class="t">
             <div class="tabs">
                 <span @click="onChoose(1)" :class="active == 1&&'item-active'">外观</span>
@@ -24,7 +24,7 @@
         </div>
         <div class="bot">
             <span class="b1">厂家指导价：<strong>10.8-13.88万</strong></span>
-            <span class="b2">获取底价</span>
+            <span class="b2" @click="$router.push('/search-val')">获取底价</span>
         </div>
     </div>
 </template>

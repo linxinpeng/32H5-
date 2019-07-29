@@ -1,6 +1,6 @@
 <template>
-    <div class="my-policy-detail">
-        <van-nav-bar title="保单详情"  @click-left="$router.go(-1)" left-arrow fixed/>
+    <div :style="tp == 0?'padding-top: 46px':'padding-top: 0'" class="my-policy-detail">
+        <van-nav-bar v-if="tp == 0" title="保单详情"  @click-left="$router.go(-1)" left-arrow fixed/>
         <div class="box">
             <div class="b1">
                 <div class="b1-l">
